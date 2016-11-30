@@ -12,6 +12,7 @@ $ sudo -i
 # chmod -R 777 /usr/local/go
 # exit
 ```
+
 # 環境ファイル
 
 
@@ -33,8 +34,13 @@ $ source $HOME/.bash_profile
 ```bash
 $ go version
 go version go1.6 linux/amd64
+```
 
-$ mkdir -p $HOME/go/$GOVERSION
+# Go1.6のソースディレクトリ作成
+
+
+```bash
+$ mkdir -p $GOPATH/src
 ```
 
 # Glideのインストール
@@ -45,7 +51,7 @@ $ glide -v
 glide version v0.12.3
 ```
 
-# プロジェクト作成
+# サンプルプロジェクト作成
 
 Githubからソースコードをクローンします
 
