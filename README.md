@@ -1,6 +1,14 @@
 ![gopher](http://golang-jp.org/doc/gopher/talks.png)
 
 
+# 実行環境
+
+```
+Amazon Linux AMI
+t2.micro
+1 コア vCPU (最大 3.3 GHz)、1 GiB メモリ RAM、8 GB ストレージ
+```
+
 # Go1.6のインストール
 
 ```bash
@@ -11,9 +19,6 @@ $ sudo -i
 # tar -C /usr/local -xzf go1.6.linux-amd64.tar.gz
 # chmod -R 777 /usr/local/go
 # exit
-```
-
-# 環境ファイル
 
 
 ```bash
@@ -35,9 +40,6 @@ $ source $HOME/.bash_profile
 $ go version
 go version go1.6 linux/amd64
 ```
-
-# Go1.6のソースディレクトリ作成
-
 
 ```bash
 $ mkdir -p $GOPATH/src
