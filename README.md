@@ -27,7 +27,7 @@ $ vi $HOME/.bash_profile
      :     追記
 export GOVERSION=1.6
 export GOROOT=/usr/local/go
-export GOPATH=/home/dev/go/$GOVERSION
+export GOPATH=$HOME/go/$GOVERSION
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 --------------------------------------------------
 ```
