@@ -59,7 +59,7 @@ Githubからソースコードをクローンします
 
 ```bash
 $ cd $GOPATH/src
-$ cd /home/dev/go/1.6/src/github.com
+$ cd $HOME/go/1.6/src/github.com
 $ git clone https://github.com/hayao56/goecho.git
 $ cd goecho
 ```
