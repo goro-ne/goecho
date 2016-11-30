@@ -1,7 +1,18 @@
 ![gopher](http://golang-jp.org/doc/gopher/talks.png)
 
+# echoフレームワークをAWS EC2環境で動かすサンプル
 
-# 実行環境
+
+## echoとは
+
+Goで作られている軽量なフレームワーク
+
+![echo](https://echo.labstack.com/images/logo.png)
+
+https://echo.labstack.com/guide
+https://github.com/labstack/echo
+
+## 実行環境
 
 ```
 Amazon Linux AMI
@@ -9,7 +20,7 @@ t2.micro
 1 コア vCPU (最大 3.3 GHz)、1 GiB メモリ RAM、8 GB ストレージ
 ```
 
-# Go1.6のインストール
+## Go1.6のインストール
 
 ```bash
 $ sudo -i
@@ -45,7 +56,7 @@ go version go1.6 linux/amd64
 $ mkdir -p $GOPATH/src
 ```
 
-# Glideのインストール
+## Glideのインストール
 
 ```bash
 $ curl https://glide.sh/get | sh
@@ -53,7 +64,7 @@ $ glide -v
 glide version v0.12.3
 ```
 
-# サンプルプロジェクト作成
+## サンプルプロジェクト作成
 
 Githubからソースコードをクローンします
 
@@ -63,7 +74,7 @@ $ git clone https://github.com/hayao56/goecho.git
 $ cd goecho
 ```
 
-# 依存パッケージのインストール
+## 依存パッケージのインストール
 
 ```bash
 $ glide install
@@ -101,14 +112,14 @@ vendor/
 ```
 
 
-# echoサーバー起動
+## echoサーバー起動
 
 ```bash
 $ go run server.go
   http server started on :1323
 ```
 
-# サーバーアクセス
+## サーバーアクセス
 
 ```bash
 $ curl http://localhost:1323
