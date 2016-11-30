@@ -11,6 +11,11 @@ $ sudo -i
 # tar -C /usr/local -xzf go1.6.linux-amd64.tar.gz
 # chmod -R 777 /usr/local/go
 # exit
+```
+# 環境ファイル
+
+
+```bash
 $ vi $HOME/.bash_profile
 --------------------------------------------------
      :     追記
@@ -18,8 +23,14 @@ export GOVERSION=1.6
 export GOROOT=/usr/local/go
 export GOPATH=/home/dev/go/$GOVERSION
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-source $HOME/.bash_profile
 --------------------------------------------------
+```
+
+```bash
+$ source $HOME/.bash_profile
+```
+
+```bash
 $ go version
 go version go1.6 linux/amd64
 
@@ -67,22 +78,59 @@ func main() {
 --------------------------------------------------
 ```
 
-# glideパッケージ作成
+# Glideパッケージの作成
 
 ```bash
-glide create
+$ glide create
 ```
 
+YAMLファイルが自動生成されます。
+
 ```bash
-vi glide.yaml
---------------------------------------------------
+$ cat glide.yaml
 package: goecho
 import:
 - package: github.com/labstack/echo
   version: ~3.0.2
---------------------------------------------------
+```
+
+# 依存パッケージのインストール
+
+```bash
 glide install
 ```
+
+```bash
+$ tree vendor/ -L 3
+vendor/
+|-- github.com
+|   |-- labstack
+|   |   |-- echo
+|   |   `-- gommon
+|   |-- mattn
+|   |   |-- go-colorable
+|   |   `-- go-isatty
+|   |-- miekg
+|   |   `-- dns
+|   |-- rsc
+|   |   `-- letsencrypt
+|   |-- tylerb
+|   |   `-- graceful
+|   |-- valyala
+|   |   `-- fasttemplate
+|   `-- xenolf
+|       `-- lego
+|-- golang.org
+|   `-- x
+|       |-- crypto
+|       |-- net
+|       |-- sys
+|       `-- time
+`-- gopkg.in
+    `-- square
+        `-- go-jose.v1
+```
+
 
 # echoサーバー起動
 
