@@ -117,13 +117,13 @@ vendor/
 
 ```bash
 $ go run server.go
-  http server started on :1323
+  http server started on :1234
 ```
 
 ## サーバーアクセス
 
 ```bash
-$ curl http://localhost:1323
+$ curl http://localhost:1234
 Hello, World!
 
 ```
