@@ -19,7 +19,7 @@ $ sudo -i
 # tar -C /usr/local -xzf go1.6.linux-amd64.tar.gz
 # chmod -R 777 /usr/local/go
 # exit
-
+```
 
 ```bash
 $ vi $HOME/.bash_profile
