@@ -5,12 +5,13 @@
 
 ## echoとは
 
-Goで作られている軽量なフレームワーク
-
 ![echo](https://echo.labstack.com/images/logo.png)
 
-https://echo.labstack.com/guide
-https://github.com/labstack/echo
+echoは Goで作られている軽量なフレームワークです。
+
+- https://echo.labstack.com/guide
+- https://github.com/labstack/echo
+
 
 ## 実行環境
 
