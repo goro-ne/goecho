@@ -51,6 +51,8 @@ $ source $HOME/.bash_profile
 ```bash
 $ go version
 go version go1.6 linux/amd64
+
+$ go get golang.org/x/tools/cmd/goimports
 ```
 
 ```bash
@@ -79,6 +81,7 @@ $ cd goecho
 
 ```bash
 $ glide install
+(2回目以降は glide update)
 ```
 
 ```bash
