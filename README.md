@@ -21,6 +21,27 @@ t2.micro
 1 コア vCPU (最大 3.3 GHz)、1 GiB メモリ RAM、8 GB ストレージ
 ```
 
+## タイムゾーン変更
+
+AWSは、すべてのリージョンの初期設定が **UTC**
+
+```bash
+ls -l /usr/share/zoneinfo/|grep Japan
+-rw-r--r--  2 root root   333 11月 11 00:31 Japan
+```
+```bash
+sudo vim /etc/sysconfig/clock
+--------------------------------------------------
+#ZONE="UTC"
+ZONE="Japan"
+UTC=true
+--------------------------------------------------
+```
+```bash
+sudo ln -sf /usr/share/zoneinfo/Japan /etc/localtime
+sudo reboot
+```
+
 ## Go1.6のインストール
 
 ```bash
